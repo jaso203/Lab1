@@ -3,7 +3,7 @@ import java.awt.event.*;
 import java.io.*;  
 
 import javax.swing.*; 
-
+/*ÐÞ¸ÄÒ»´Î*/
 import java.util.LinkedList;
 import java.util.Iterator;
 import java.util.Scanner;
