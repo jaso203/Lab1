@@ -2,7 +2,7 @@ package final_count;
 import java.awt.event.*;  
 import java.io.*;  
 
-import javax.swing.*; 
+import javax.swing.*; //第一次修改
 /*修改一次*/
 import java.util.LinkedList;
 import java.util.Iterator;
