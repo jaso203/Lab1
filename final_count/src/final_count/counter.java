@@ -12,7 +12,7 @@ import java.util.regex.Pattern;
 import java.util.Random;
 import java.util.Vector;
 
-import com.sun.image.codec.jpeg.JPEGCodec;
+import com.sun.image.codec.jpeg.JPEGCodec;//make change4
 import com.sun.image.codec.jpeg.JPEGImageEncoder;
 
 import javax.imageio.*;

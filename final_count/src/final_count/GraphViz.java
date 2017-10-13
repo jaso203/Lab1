@@ -11,7 +11,7 @@ class  GraphViz{
     private String runOrder="";
     private String dotCodeFile="dotcode.txt";
     private String resultGif="dotGif";
-    private StringBuilder graph = new StringBuilder();
+    private StringBuilder graph = new StringBuilder();//make change4
 
     Runtime runtime=Runtime.getRuntime();
 
