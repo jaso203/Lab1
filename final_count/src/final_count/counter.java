@@ -8,7 +8,7 @@ import java.util.LinkedList;
 import java.util.Iterator;
 import java.util.Scanner;
 import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import java.util.regex.Pattern;//make change4
 import java.util.Random;
 import java.util.Vector;//make changeB2
 
