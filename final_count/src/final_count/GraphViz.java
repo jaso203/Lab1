@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-
+//My second attempt
 class  GraphViz{
     private String runPath = "";
     private String dotPath = ""; 
@@ -14,7 +14,7 @@ class  GraphViz{
     private StringBuilder graph = new StringBuilder();//make change4
 
     Runtime runtime=Runtime.getRuntime();
-
+    //make changes in B2
     public void run() {
         File file=new File(runPath);
         file.mkdirs();
