@@ -1,21 +1,21 @@
 package final_count;//make change3
-
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
-
 //My second attempt
-class  GraphViz{
-    private String runPath = "";
-    private String dotPath = ""; 
-    private String runOrder="";
+
+class  GraphViz
+{
+  private String runPath = "";
+  private String dotPath = "";
+  private String runOrder="";
     private String dotCodeFile="dotcode.txt";
     private String resultGif="dotGif";
     private StringBuilder graph = new StringBuilder();//make change4
-
-    Runtime runtime=Runtime.getRuntime();
+  Runtime runtime = Runtime.getRuntime();
     //make changes in B2
-    public void run() {
+  
+  public void run() {
         File file=new File(runPath);
         file.mkdirs();
         writeGraphToFile(graph.toString(), runPath);
@@ -70,17 +70,19 @@ class  GraphViz{
     }
 
     public void start_graph() {
-        graph.append("digraph G {\n") ;
+    graph.append("digraph G {\n") ;
     }
 
     public void end_graph() {
         graph.append("}") ;
     }
+    
     public void setname(String s) {
        this.resultGif=s;
     }
-    public String getname() {
-        return this.resultGif;
-     }
     
-} 
+    public String getname() {
+    	return this.resultGif;
+  }
+    
+ } 
