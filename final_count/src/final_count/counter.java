@@ -1,9 +1,6 @@
 package final_count;//make change3
 import java.awt.event.*;  
 import java.io.*;  
-
-import javax.swing.*; //第一次修改
-/*修改一次*/
 import java.util.LinkedList;
 import java.util.Iterator;
 import java.util.Scanner;
@@ -11,27 +8,22 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;//make change4
 import java.util.Random;
 import java.util.Vector;//make changeB2
-
-import com.sun.image.codec.jpeg.JPEGCodec;//make change4
-import com.sun.image.codec.jpeg.JPEGImageEncoder;
-
-import javax.imageio.*;
-
 import java.util.Map;
 import java.awt.image.BufferedImage;
+import javax.swing.*; //第一次修改
+/*修改一次*/
+//import com.sun.image.codec.jpeg.JPEGCodec;//make change4
+//import com.sun.image.codec.jpeg.JPEGImageEncoder;
+import javax.imageio.*;
 import java.awt.*;
-import javax.swing.ImageIcon;
-
-
-import com.sun.image.codec.jpeg.JPEGCodec;
-import com.sun.image.codec.jpeg.JPEGImageEncoder;
-
 import javax.swing.*; 
+import javax.swing.ImageIcon;
+//import com.sun.image.codec.jpeg.JPEGCodec;
+//import com.sun.image.codec.jpeg.JPEGImageEncoder;
 import javax.swing.border.Border;
 import javax.swing.border.LineBorder;
 import javax.swing.border.MatteBorder;
 import javax.swing.filechooser.FileNameExtensionFilter;
-
 import org.omg.CORBA.Bounds;
 
 public class counter {
@@ -43,13 +35,13 @@ public class counter {
     private static String RandomPath="";
     private static String ValidInf="";
 	public static void main(String[] args){
-		JFrame f = new JFrame();
+    JFrame f = new JFrame();
         f.setTitle("Menu");//标题内容
         f.setBounds(0,0,800,800);
         f.setLocation(300,200);
-        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);  
-        ImageIcon background=new ImageIcon("welcome3.jpg");// 背景图片  
-        JLabel label = new JLabel(background);// 把背景图片显示在一个标签里面   
+        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        ImageIcon background=new ImageIcon("welcome3.jpg");// 背景图片 
+        JLabel label = new JLabel(background);// 把背景图片显示在一个标签里面
         label.setBounds(0,0,800,800);   
         JPanel imagePanel=(JPanel)f.getContentPane();  
         imagePanel.setOpaque(false);  
@@ -162,7 +154,7 @@ public class counter {
 		    	}
 	    	}
 	    }
-	    else{
+    	else{
 	    	System.out.println("Error!More than two words!");
 	    }*/
 	    
@@ -211,7 +203,7 @@ public class counter {
 	    	Node temp=new Node((String) iter1.next());
 	    	nodeslist.add(temp);
 	    }
-	    if(nodes!=null){
+    if(nodes!=null){
 	    	for (i=0; i<nodes.length-1; i++) {  
 		    	Edge edge=new Edge();
 		    	edge.SetHead(nodes[i]);
@@ -337,7 +329,7 @@ public class counter {
 				graphics.setFont(f);
 				graphics.drawString(""+w,(loc[i][0]+loc[j][0])/2,(loc[i][1]+loc[j][1])/2);
 			}
-			System.out.println();
+			//System.out.println();
 		}
 		for(int i = 0;i <num;i++) {
 			graphics.setColor(Color.gray);
