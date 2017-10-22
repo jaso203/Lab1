@@ -67,7 +67,7 @@ public class counter {
         f.add(function_Show);
         f.add(function_Check);
         f.add(function_Create);
-        f.add(function_ShortestPath);
+        f.add(function_ShortestPath);//不认同的修改
         f.add(function_RandomPath);
         f.add(function_Exit);
         f.add(new JLabel());
