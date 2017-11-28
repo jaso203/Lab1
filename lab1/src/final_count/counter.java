@@ -1,33 +1,29 @@
-package final_count;
+package final_count;//make change3
 import java.awt.event.*;  
 import java.io.*;  
-
-import javax.swing.*; 
-
 import java.util.LinkedList;
 import java.util.Iterator;
 import java.util.Scanner;
 import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import java.util.regex.Pattern;//make change4
 import java.util.Random;
-import java.util.Vector;
-
-
-import javax.imageio.*;
-
+import java.util.Vector;//make changeB2
 import java.util.Map;
 import java.awt.image.BufferedImage;
+import javax.swing.*; //第一次修改
+/*修改一次*/
+//import com.sun.image.codec.jpeg.JPEGCodec;//make change4
+//import com.sun.image.codec.jpeg.JPEGImageEncoder;
+import javax.imageio.*;
 import java.awt.*;
-import javax.swing.ImageIcon;
-
-
-
 import javax.swing.*; 
+import javax.swing.ImageIcon;
+//import com.sun.image.codec.jpeg.JPEGCodec;
+//import com.sun.image.codec.jpeg.JPEGImageEncoder;
 import javax.swing.border.Border;
 import javax.swing.border.LineBorder;
 import javax.swing.border.MatteBorder;
 import javax.swing.filechooser.FileNameExtensionFilter;
-
 import org.omg.CORBA.Bounds;
 
 public class counter {
@@ -39,14 +35,14 @@ public class counter {
     private static String RandomPath="";
     private static String ValidInf="";
 	public static void main(String[] args){
-		JFrame f = new JFrame();
+    JFrame f = new JFrame();
         f.setTitle("Menu");//标题内容
-        f.setBounds(0,0,1000,600);
+        f.setBounds(0,0,800,800);
         f.setLocation(300,200);
-        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);  
-        ImageIcon background=new ImageIcon("23.jpg");// 背景图片  
-        JLabel label = new JLabel(background);// 把背景图片显示在一个标签里面   
-        label.setBounds(0,0,1000,600);   
+        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        ImageIcon background=new ImageIcon("welcome3.jpg");// 背景图片 
+        JLabel label = new JLabel(background);// 把背景图片显示在一个标签里面
+        label.setBounds(0,0,800,800);   
         JPanel imagePanel=(JPanel)f.getContentPane();  
         imagePanel.setOpaque(false);  
         f.getLayeredPane().setLayout(null);   
@@ -60,23 +56,22 @@ public class counter {
         JButton function_ShortestPath=new JButton("Find the ShortestPath");
         JButton function_RandomPath=new JButton("Random Walk");
         JButton function_Exit=new JButton("Exit");
-        function_Open.setBounds(50,200,150,30);
-        function_Show.setBounds(50,250,150,30);
-        function_Check.setBounds(50,300,150,30);
-        function_Create.setBounds(50,350,150,30);
-        function_ShortestPath.setBounds(50,400,150,30);
-        function_RandomPath.setBounds(50,450,150,30);
-        function_Exit.setBounds(50,500,150,30);
+        function_Open.setBounds(50,300,150,30);
+        function_Show.setBounds(50,350,150,30);
+        function_Check.setBounds(50,400,150,30);
+        function_Create.setBounds(50,450,150,30);
+        function_ShortestPath.setBounds(50,500,150,30);
+        function_RandomPath.setBounds(50,550,150,30);
+        function_Exit.setBounds(50,600,150,30);
         f.add(function_Open);
         f.add(function_Show);
         f.add(function_Check);
         f.add(function_Create);
-        f.add(function_ShortestPath);
+        f.add(function_ShortestPath);//不认同的修改
         f.add(function_RandomPath);
         f.add(function_Exit);
         f.add(new JLabel());
         f.setVisible(true);//窗体可见。
-        f.setResizable(false);
         
         function_Open.addActionListener(listen_Open);
         
@@ -159,7 +154,7 @@ public class counter {
 		    	}
 	    	}
 	    }
-	    else{
+    	else{
 	    	System.out.println("Error!More than two words!");
 	    }*/
 	    
@@ -208,7 +203,7 @@ public class counter {
 	    	Node temp=new Node((String) iter1.next());
 	    	nodeslist.add(temp);
 	    }
-	    if(nodes!=null){
+    if(nodes!=null){
 	    	for (i=0; i<nodes.length-1; i++) {  
 		    	Edge edge=new Edge();
 		    	edge.SetHead(nodes[i]);
@@ -265,6 +260,35 @@ public class counter {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        /*JFrame pic2=new JFrame("Graph Pattern2");
+		File picture2 = new File("D:\\program_picture\\dotGif.jpg");
+		BufferedImage sourceImg2;
+		try {
+			sourceImg2=ImageIO.read(new FileInputStream(picture2));
+			int width=sourceImg2.getWidth();
+			int height=sourceImg2.getHeight();
+		    pic2.setSize(600,800);
+			JPanel panel=new JPanel();
+			JLabel label=new JLabel();
+			pic2.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+			ImageIcon img=new ImageIcon("D:\\program_picture\\dotGif.jpg");
+			label.setIcon(img);
+			panel.add(label);
+			JScrollPane scr=new JScrollPane(panel);
+			scr.setVisible(true);
+			pic2.getContentPane().add(scr);
+			pic2.setVisible(true);
+			pic2.setAlwaysOnTop(true);
+		} catch (IOException e2) {
+			e2.printStackTrace();
+		}*/
+	     /* try {
+              String cmdText = "cmd /c start " + "D:\\program_picture\\dotGif.jpg";
+              Runtime.getRuntime().exec(cmdText);
+              } catch (IOException e) {
+              e.printStackTrace();
+              }*/
+		
 	}
     public static void showDirectedGraph(int loc[][]) {
 		//init();
@@ -305,7 +329,7 @@ public class counter {
 				graphics.setFont(f);
 				graphics.drawString(""+w,(loc[i][0]+loc[j][0])/2,(loc[i][1]+loc[j][1])/2);
 			}
-			System.out.println();
+			//System.out.println();
 		}
 		for(int i = 0;i <num;i++) {
 			graphics.setColor(Color.gray);
@@ -315,35 +339,23 @@ public class counter {
 			graphics.setFont(f);
 			graphics.drawString(nodeslist.get(i).getName(), loc[i][0]-huiqiu, loc[i][1]);
 		}
-		File result = new File("D:\\program_picture\\first.jpg");  
+		File filen = new File("D:\\program_picture\\first.jpg");  
         try {  
-            ImageIO.write(image, "JPG", result);  
+            ImageIO.write(image, "JPG", filen);  
         } catch (IOException k) {  
             k.printStackTrace();  
         }    
 		graphics.dispose();
-    	JFrame pic2=new JFrame("Graph Pattern2");
-		File picture2 = new File("D:\\program_picture\\dotGif.jpg");
-		BufferedImage sourceImg2;
-		try {
-			sourceImg2=ImageIO.read(new FileInputStream(picture2));
-			int width=sourceImg2.getWidth();
-			int height=sourceImg2.getHeight();
-		    pic2.setSize(600,800);
-			JPanel panel=new JPanel();
-			JLabel label=new JLabel();
-			pic2.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-			ImageIcon img=new ImageIcon("D:\\program_picture\\dotGif.jpg");
-			label.setIcon(img);
-			panel.add(label);
-			JScrollPane scr=new JScrollPane(panel);
-			scr.setVisible(true);
-			pic2.getContentPane().add(scr);
-			pic2.setVisible(true);
-			pic2.setAlwaysOnTop(true);
-		} catch (IOException e2) {
-			
-		}
+		/*try {
+			FileOutputStream fos = new FileOutputStream("D:\\first.jpg");
+			BufferedOutputStream bos = new BufferedOutputStream(fos);
+			JPEGImageEncoder encoder = JPEGCodec.createJPEGEncoder(bos);
+			encoder.encode(image);
+			bos.close(); 
+		} catch (Exception e) {
+			e.printStackTrace();
+		}*/
+		//return loc;
 		JFrame pic1=new JFrame("Graph Pattern1");
 		File picture1 = new File("D:\\program_picture\\first.jpg");
 		BufferedImage sourceImg1;
@@ -363,43 +375,59 @@ public class counter {
 			pic1.getContentPane().add(scr);
 			pic1.setVisible(true);
 		} catch (IOException e1) {
-			
+			e1.printStackTrace();
 		}
-		/*try {
-			FileOutputStream fos = new FileOutputStream("D:\\first.jpg");
-			BufferedOutputStream bos = new BufferedOutputStream(fos);
-			JPEGImageEncoder encoder = JPEGCodec.createJPEGEncoder(bos);
-			encoder.encode(image);
-			bos.close(); 
-		} catch (Exception e) {
-			e.printStackTrace();
-		}*/
-		//return loc;
 	}
-	public static String queryBridgeWords(String Word1,String Word2){
+	public String queryBridgeWords(String Word1,String Word2){
+		String OriginWord1=Word1;
+		String OriginWord2=Word2;
+		Word1=Word1.toLowerCase();
+		Word2=Word2.toLowerCase();
 		String result=" ";
+		int flag1=0,flag2=0;
+		if(!Word1.equals("") && !Word2.equals("")) {
+			for(int i=0;i<Word1.length();i++) {
+				if(!(Word1.charAt(i)<='z' && Word1.charAt(i)>='a') && !(Word1.charAt(i)<='Z' && Word1.charAt(i)>='A')) {
+					flag1=1;
+				}
+			}
+			for(int i=0;i<Word2.length();i++) {
+				if(!(Word2.charAt(i)<='z' && Word2.charAt(i)>='a') && !(Word2.charAt(i)<='Z' && Word2.charAt(i)>='A')) {
+					flag2=1;
+				}
+			}
+			if(flag1==1 || flag2==1) {
+				result="Invalid input!(blank or include illegal character)";
+			    return result;
+			}
+		
+		}
+		else {
+			result="Invalid input!(blank or include illegal character)";
+		    return result;
+		}
 		int index1=strslist.indexOf(Word1);
 		int index2=strslist.indexOf(Word2);
 		if(index1==-1 && index2!=-1){
-			result="No "+"\""+Word1+"\""+" in the graph!";
+			result="No "+"\""+OriginWord1+"\""+" in the graph!";
 		    return result;
 		}
 		else if(index1!=-1 && index2==-1){
-		    result="No "+"\""+Word2+"\""+" in the graph!";
+		    result="No "+"\""+OriginWord2+"\""+" in the graph!";
 		    return result;
 		}
 		else if(index1==-1 && index2==-1){
-			result="No "+"\""+Word1+"\""+" or "+"\""+Word2+"\""+" in the graph!";
+			result="No "+"\""+OriginWord1+"\""+" or "+"\""+OriginWord2+"\""+" in the graph!";
 			return result;
 		}
 		else{
 			Edge edge=nodeslist.get(index1).GetAdj();
 			if (edge==null){
-			   result="No bridge words from "+"\""+Word1+"\""+" to "+"\""+Word2+"\""+"!";
+			   result="No bridge words from "+"\""+OriginWord1+"\""+" to "+"\""+OriginWord2+"\""+"!";
 			   return result;
 			}
 			else if(edge.GetTail().equals(Word2)){
-				result="No bridge words from "+"\""+Word1+"\""+" to "+"\""+Word2+"\""+"!";
+				result="No bridge words from "+"\""+OriginWord1+"\""+" to "+"\""+OriginWord2+"\""+"!";
 				return result;
 			}
 			else{
@@ -423,16 +451,16 @@ public class counter {
 		}
 		result=result.trim();
 		if(result.equals("")){
-			result="No bridge words from "+"\""+Word1+"\""+" to "+"\""+Word2+"\""+"!";
+			result="No bridge words from "+"\""+OriginWord1+"\""+" to "+"\""+OriginWord2+"\""+"!";
 		}
 		else{
 			Pattern p=Pattern.compile(",");   
 			String[] answers=p.split(result);
 			if (answers.length==1){
-				result="The bridge words from "+"\""+Word1+"\""+" to "+"\""+Word2+"\""+" is: "+answers[0];
+				result="The bridge words from "+"\""+OriginWord1+"\""+" to "+"\""+OriginWord2+"\""+" is: "+answers[0]+".";
 			}
 			else{
-				result="The bridge words from "+"\""+Word1+"\""+" to "+"\""+Word2+"\""+" are: "+answers[0];
+				result="The bridge words from "+"\""+OriginWord1+"\""+" to "+"\""+OriginWord2+"\""+" are: "+answers[0];
 				for(int i=1;i<answers.length;i++){
 					if(i==answers.length-1){
 						result=result+" and "+answers[i]+".\"";
@@ -610,8 +638,8 @@ public class counter {
         }
         if(max-min+1>0)
         	RandomNode1Index=random1.nextInt(max-min+1)+min;
-        else
-        	RandomNode1Index=min;
+        //else
+        	//RandomNode1Index=min;
         if(RandomNode1Index<strslist.size()){
         	 result+=strslist.get(RandomNode1Index)+" ";
         	 RandomPath+=strslist.get(RandomNode1Index)+" ";
@@ -686,7 +714,7 @@ public class counter {
     public static String getValidInf(){
     	return ValidInf;
     }
-    public static void SetValidInf(String inf){
+    public void SetValidInf(String inf){
     	ValidInf=inf;
     }
     public static int[][] getarry(){
@@ -888,11 +916,10 @@ class DescribeGraph extends JFrame implements ActionListener{
     	labelbg.setBounds(0,0,500,600);
     	panel.add(labelbg);
     	panel.setOpaque(false);
-    	this.setTitle("Show Graph");//标题内容
+    	this.setTitle("Show the graph");//标题内容
 		this.setBounds(0,0,500,600);
 		this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);  
 		this.setVisible(true);
-		this.setResizable(false);
 	
 		hint.setFont(font);
 		hint.setForeground(Color.blue);
@@ -909,8 +936,38 @@ class DescribeGraph extends JFrame implements ActionListener{
 	public void actionPerformed(ActionEvent e) {
         
 		int loc[][] = new int[1000][2];
-    	count.myshowDirectedGraph(count.getNodeslist());
     	count.showDirectedGraph(loc);
+    	count.myshowDirectedGraph(count.getNodeslist());
+    	
+    	/*JFrame pic2=new JFrame("Graph Pattern2");
+		File picture2 = new File("D:\\program_picture\\dotGif.jpg");
+		BufferedImage sourceImg2;
+		try {
+			sourceImg2=ImageIO.read(new FileInputStream(picture2));
+			int width=sourceImg2.getWidth();
+			int height=sourceImg2.getHeight();
+		    pic2.setSize(600,800);
+			JPanel panel=new JPanel();
+			JLabel label=new JLabel();
+			pic2.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+			ImageIcon img=new ImageIcon("D:\\program_picture\\dotGif.jpg");
+			label.setIcon(img);
+			panel.add(label);
+			JScrollPane scr=new JScrollPane(panel);
+			scr.setVisible(true);
+			pic2.getContentPane().add(scr);
+			pic2.setVisible(true);
+			pic2.setAlwaysOnTop(true);
+		} catch (IOException e2) {
+			e2.printStackTrace();
+		}
+		
+		try {
+            String cmdText = "cmd /c start " + "D:\\program_picture\\dotGif.jpg";
+            Runtime.getRuntime().exec(cmdText);
+            } catch (IOException e3) {
+            e3.printStackTrace();
+            }*/
 	}
 }
 
@@ -955,7 +1012,6 @@ class CheckBridgeWords extends JFrame implements ActionListener{
 		this.setLocation(300,200);
 		this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);  
 		this.setVisible(true); 
-		this.setResizable(false);
 		hint.setFont(font);
 		hint.setForeground(Color.blue);
 	    hint.setBounds(150,50,300,30);
@@ -992,8 +1048,8 @@ class CheckBridgeWords extends JFrame implements ActionListener{
 
     public void actionPerformed(ActionEvent e){  
        String word1="",word2="",result=null;
-       word1=input1.getText().toLowerCase();
-       word2=input2.getText().toLowerCase();
+       word1=input1.getText();
+       word2=input2.getText();
        if(word1!=""||word2!=""){
     	   result=count.queryBridgeWords(word1,word2);
            output.setText(result);
@@ -1044,7 +1100,6 @@ class CreateNewTXT extends JFrame implements ActionListener{
 		this.setLocation(300,200);
 		this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);  
 		this.setVisible(true); 
-		this.setResizable(false);
 		hint.setFont(font);
 		hint.setForeground(Color.blue);
 	    hint.setBounds(150,50,300,30);
@@ -1125,7 +1180,6 @@ class FindShortestPath extends JFrame implements ActionListener{
 		this.setLocation(300,200);
 		this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);  
 		this.setVisible(true); 
-		this.setResizable(false);
 		output.setEditable(true);
 		
 		hint.setFont(font);
@@ -1515,7 +1569,6 @@ class RandomWalk extends JFrame implements ActionListener{
 		this.setLocation(300,200);
 		this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);  
 		this.setVisible(true); 
-		this.setResizable(false);
 	        
 		hintresult.setForeground(Color.blue);
 		hintresult.setFont(font);
@@ -1691,7 +1744,6 @@ class RandomProcedure extends JFrame {
 		this.setLocation(300,200);
 		this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);  
 		this.setVisible(true); 
-		this.setResizable(false);
 		output.setEditable(true);
         output.setLineWrap(true);
         output.setBorder(new LineBorder(new Color(0, 0, 0)));
